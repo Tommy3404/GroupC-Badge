@@ -1,0 +1,49 @@
+title Remove Badge
+Admin->System: Select user
+System->Admin: Show badges
+Admin->System: Click remove
+System->Admin: Badge removed
+
+title Give Badge
+Admin->System: Select user
+System->Admin: Show badge options
+Admin->System: Choose badge
+System->Admin: Badge awarded
+
+title Admin Login
+Admin->LoginPage: Enter credentials
+LoginPage->System: Authenticate
+System->Admin: Access granted
+
+title Mark Challenge Done
+Admin/Owner->System: View challenge
+System->Admin/Owner: Mark complete
+System->Admin/Owner: Status updated
+
+title Create Challenge
+Admin->System: Click 'New Challenge'
+System->Admin: Enter details
+Admin->System: Submit
+System->Admin: Challenge created
+
+title Create Badge
+Owner->System: Open badge form
+System->Owner: Enter badge info
+Owner->System: Submit
+System->Owner: Badge saved
+
+title Give Badge for Completed Challenge
+Admin/Owner->System: View confirmed challenge
+System->Admin/Owner: Select user
+Admin/Owner->System: Award badge
+System->Admin/Owner: Badge given
+
+title View Challenges
+User->System: Request challenges
+System->User: Return challenge list
+
+title View Badges as List or Grid
+User->System: Open badge view
+System->User: Show list/grid option
+User->System: Choose view
+System->User: Display badges
