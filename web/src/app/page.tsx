@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
       <input type="text" id="login" />
       </div>
       <div className={styles.login}>
-         <button>Login</button>
+         <Link style={{textDecoration: 'none', color: 'black'}} href="./homePage">Login</Link>
       </div>
     </div>
   );
