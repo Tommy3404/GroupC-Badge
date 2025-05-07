@@ -1,19 +1,16 @@
-import { serve } from "https://deno.land/std@0.200.0/http/server.ts";
-import { usersHandler } from "./routes/users.ts";
-import { badgesHandler } from "./routes/badges.ts";
+// @ts-types="npm:@types/express"
+import express from "npm:express"; 
+const app = express() 
 
-console.log("✅ Zachary's backend running on http://localhost:8000");
+app.get("/", ( request , response )=>{
+    response.send("Welcome to our Server")
+})
+app.get("/submitbag", ( request , response )=>{
+    response.send("Default Response")
+})
 
-serve((req: Request) => {
-  const url = new URL(req.url);
+app.listen(3005)
+console.log("Listening on port 3005");
 
-  if (url.pathname.startsWith("/api/users")) {
-    return usersHandler(req);
-  }
 
-  if (url.pathname.startsWith("/api/badges")) {
-    return badgesHandler(req);
-  }
 
-  return new Response("404 Not Found", { status: 404 });
-});
