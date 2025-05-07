@@ -27,23 +27,26 @@ body {
     margin-top: 30px;
     padding: 0 20px;
     box-sizing: border-box;
+    gap: 20px;
   }
   
-  /* Shared box styling */
   .names, .badges, .challenges {
     flex: 1;
     border: 1px solid black;
     padding: 20px;
     box-sizing: border-box;
   }
+
+  .names {
+    text-align: center;
+  }
   
   .badges {
     text-align: center;
   }
   
-  /* Right-align "Challenges" */
   .challenges {
-    text-align: right;
+    text-align: center;
   }
   
   /* Media Query for responsiveness */
